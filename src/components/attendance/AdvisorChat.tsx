@@ -149,7 +149,7 @@ export function AdvisorChat({ snapshot }: { snapshot: string }) {
               ) : (
                 messages.map((message) => (
                   <Message from={message.role} key={message.id}>
-                    <MessageContent variant={message.role === "user" ? "contained" : "flat"}>
+                    <MessageContent>
                       {message.parts.map((part, i) =>
                         part.type === "text" ? (
                           <MessageResponse key={`${message.id}-${i}`}>{part.text}</MessageResponse>
